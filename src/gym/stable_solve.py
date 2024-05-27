@@ -14,12 +14,16 @@
 
 import gym
 import network_sim
+import os
+import warnings
+warnings.filterwarnings('ignore', category=FutureWarning)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0 = all messages, 1 = INFO, 2 = WARNING, 3 = ERROR
 import tensorflow as tf
 
 from stable_baselines.common.policies import MlpPolicy
 from stable_baselines.common.policies import FeedForwardPolicy
 from stable_baselines import PPO1
-import os
+
 import sys
 import inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
