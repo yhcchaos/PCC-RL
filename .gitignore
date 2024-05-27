@@ -5,6 +5,7 @@ __pycache__/
 
 # checkpoints
 src/gym/checkpoints/
+src/gym/model_A
 # C extensions
 *.so
 
